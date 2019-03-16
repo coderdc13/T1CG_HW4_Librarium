@@ -1,0 +1,58 @@
+html {
+    display: table;
+    margin: auto;
+  }
+  
+  body {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 100%;
+    background-color: lightblue;
+  }
+  
+  .titleDisplay {
+    font-family: Serif;
+    border-style: outset;
+    background-color: lightseagreen;
+    color: darkBlue;
+    margin: 40px;
+    padding: 40px;
+    box-shadow: 0 0 5px 0 #771b1b80;
+  }
+  
+  .outputPanel,
+  .inputPanel,
+  .unreadArrayOutputPanel {
+    font-family: Serif;
+    height: auto;
+    width: 600px;
+    background-color: lightseagreen;
+    color: darkblue;
+    border-style: outset;
+    margin: 40px;
+    padding: 40px;
+    box-shadow: 0 0 5px 0 #771b1b80;
+  }
+  
+  button {
+    border-radius: 12px;
+    background-color: lightblue;
+    color: darkblue;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  /* select any div tag and any p tag inside element with class inputPanel */
+  .inputPanel div p {
+    display: inline-block;
+  }
+  
+  /* select readclass, select psuedo-selector (checked state), ~ - means get sibling anywhere after, followed by desired sibling selector */
+  .readClass:checked ~ .torf2 {
+    display: none;
+  }
+  
+  .readClass:not(:checked) ~ .torf1 {
+    display: none;
+  }

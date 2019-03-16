@@ -1,0 +1,73 @@
+<!-- trouble getting functionality... -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  <title>academy</title>
+</head>
+<style></style>
+
+<body>
+  <h1 class="titleDisplay">JSON Object Format Helper!!!</h1>
+  <div class="outputPanel">
+    <h2>Reading List</h2>
+    <p>You have read...</p>
+    <div>
+      <p id="statusRead"></p> <!--this ID is going to be put in document.getElementById-->
+    </div>
+    <p>You still have to read...</p>
+    <p id="statusNotRead"></p> <!--this ID is going to be put in document.getElementById-->
+    <button id="checkBooks" class="buttonStyle" onclick="checkStoredBooks()">Status of Stored Books</button>
+    <!--this ID is going to be put in document.getElementById-->
+    <!--in div below, are IDs title, author, and readingStatus, each of which is used in js function...-->
+  </div>
+  <div class="inputPanel">
+    <div>
+      <p>{</p>
+      <p>title:</p>
+      <input type="text" id="title" />
+      <p>,</p>
+    </div>
+
+    <div>
+      <p>author:</p>
+      <input type="text" id="author" />
+      <p>,</p>
+    </div>
+
+    <div>
+      <p>Reading Status</p>
+      <input class="readClass" type="checkbox" id="readingStatus" />
+      <p class="torf1">True</p>
+      <p class="torf2">False</p>
+      <p>};</p>
+    </div>
+
+    <button class="buttonStyle" id="addButton" onclick="addBook()">Add New Object</button>
+  </div>
+  <div>
+    <h1 class="titleDisplay">JSON Array Format Helper!!!</h1>
+  </div>
+  <div class="unreadArrayOutputPanel">
+    <h2>Array of Books to Read</h2>
+    <p>[</p>
+    <p class="unreadBookArrayView"></p>
+    <p>]</p>
+    <h2>Array of Read Books</h2>
+    <p>[</p>
+    <p class="readBookArrayView"></p>
+    <p>]</p>
+    <button onclick="makeArray()">Make Arrays</button>
+    <button onclick="updateArray()">Update Array</button>
+  </div>
+</body>
+<script src="script.js"></script>
+
+</html>
